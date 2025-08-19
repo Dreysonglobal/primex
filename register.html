@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Primex Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Action Buttons -->
+    <div class="action-buttons">
+        <a href="https://wa.me/2348123287901" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Live Chat
+        </a>
+        <a href="tel:08060034357" class="call-button">
+            <i class="fas fa-phone"></i> Call Us
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Primex Hospital Logo" class="logo-img">
+    
+                <h1>Primex Hospital</h1>
+                
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="register.html" class="register-btn">Register</a></li>
+                    <li><a href="gallery.html">Our Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="registration-section">
+            <div class="container">
+                <h2>Patient Registration</h2>
+                <p>Please fill out this form to register as a patient at Primex Hospital. All information will be kept confidential.</p>
+                
+                <form id="registrationForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">Date of Birth*</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender*</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address*</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type</label>
+                        <select id="bloodType" name="bloodType">
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="medicalHistory">Medical History (Existing conditions, allergies, etc.)</label>
+                        <textarea id="medicalHistory" name="medicalHistory" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceNeeded">Service Needed*</label>
+                        <select id="serviceNeeded" name="serviceNeeded" required>
+                            <option value="">Select Service</option>
+                            <option value="Medical Services">Medical Services</option>
+                            <option value="Surgical services">Surgical services</option>
+                            <option value="Pediatric services">Pediatric services</option>
+                            <option value="Ambulance services">Ambulance services</option>
+                            <option value="Special clinical services">Special clinical services</option>
+                            <option value="Obstetrics and gynecology services">Obstetrics and gynecology services</option>
+                            <option value="Dental services">Dental services</option>
+                            <option value="Onsite laboratory">Onsite laboratory</option>
+                            <option value="Mortuary services">Mortuary services</option>
+                            <option value="Onsite imaging">Onsite imaging</option>
+                            <option value="Onsite pharmacy">Onsite pharmacy</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Appointment Date</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you have medical insurance?*</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="insurance" value="yes" required> Yes
+                            </label>
+                            <label>
+                                <input type="radio" name="insurance" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">Submit Registration</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+        <!-- Google Map Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <h2 class="map-title">Our Location</h2>
+                    <iframe 
+                        class="google-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.255954415266858!3d6.527566645329475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d7c33b0e1c1%3A0x5b5a5b5b5b5b5b5b!2s58%20Igando%20Rd%2C%20Ikotun%2C%20Lagos!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="address-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 58 Igando Road, Unity bus stop, Ikotun, Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Primex Hospital. All Rights Reserved.</p>
+            >
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
